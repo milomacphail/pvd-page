@@ -7,7 +7,13 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <script>global(document).on(‘click’, ‘.dropdown-menu-button’, function (e) {
+                e.stopPropagation();
+                });
+        </script>
         
+        
+        <link rel="shortcut icon" href="http://www.providenceri.gov/wp-content/uploads/2016/01/square-p-01-copy.png">
         
     <body>
         <nav class ="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,11 +31,13 @@
                         MAYOR JORGE O. ELORZA
                     </p>
                 </div>
+                <input type="text" placeholder="Search" style="background: url('http://kodyrabatowe.wp.pl/img/ico/search_gr.png') top left     no-repeat;"/>
             </div>
         </nav>
-        <nav class="nav nav-fill bg-grey">
-            <div class="dropdown show">
-                <a class="nav-item nav-link btn dropdown-toggle" href="" role="button" style=".dropdown:hover .dropdown-content {display: block;}" >CITY HALL</a>
+        
+        <nav class="nav nav-fill bg-light">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopuup="true" aria-expanded="false" href="" style="text-secondary" role="button">CITY HALL</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="http://www.providenceri.gov/i-want-to/">I Want To...</a>
                 <a class="dropdown-item" href="http://www.providenceri.gov/mayors-office/">Mayor's Office</a>
@@ -39,29 +47,31 @@
                 </div>
             </div>
             </div>
-            <div class="dropdown show">
-                <a class="nav-item nav-link btn dropdown-toggle" href="" role="button">DOING BUSINESS</a>
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopuup="true" aria-expanded="false" href="" style="text-secondary" role="button">DOING BUSINESS</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="http://www.providenceeconomicdevelopment.net/business-portal/index.php">Starting a Business</a>
-                <a class="dropdown-item" href="http://www.providenceri.gov/inspection-standards/">Construction</a>
-                <a class="dropdown-item" href="http://www.providenceri.gov/board-of-licenses/">Running a Business</a>
-                <a class="dropdown-item" href="http://www.providenceri.gov/ethics/">Ethics</a>
+                <a class="dropdown-item bg-light" href="http://www.providenceeconomicdevelopment.net/business-portal/index.php">Starting a Business</a>
+                <a class="dropdown-item bg-light" href="http://www.providenceri.gov/inspection-standards/">Construction</a>
+                <a class="dropdown-item bg-light" href="http://www.providenceri.gov/board-of-licenses/">Running a Business</a>
+                <a class="dropdown-item bg-light" href="http://www.providenceri.gov/ethics/">Ethics</a>
                 </div>
             </div>
-            <a href="http://www.providenceri.gov/event/" class="nav-item nav-link">EVENTS</a>
-            <a href="#=http://www.providenceri.gov/news-events/" class="nav-item nav-link">NEWS</a>
-            <a href="http://www.providenceri.gov/pvd-311/" class="nav-item nav-link">PVD 311</a>
-            <a href="https://www.goprovidence.com/" class="nav-item nav-link">EXPLORE</a>
+            <a href="http://www.providenceri.gov/event/" class="nav-item nav-link bg-light">EVENTS</a>
+            <a href="#=http://www.providenceri.gov/news-events/" class="nav-item nav-link bg-light">NEWS</a>
+            <a href="http://www.providenceri.gov/pvd-311/" class="nav-item nav-link bg-light">PVD 311</a>
+            <a href="https://www.goprovidence.com/" class= "nav-item nav-link bg-light">EXPLORE</a>
         </nav>
         <section class="home-hero" style="background-image: url(http://bit.ly/pvdskylines); height: 300px; background-size: cover; background-position-x: 50%; background-position-y: center;"></section>
-        <div class="container">
-            <div class="row" style="margin-top: 25px;">
-                <div class="col-sm">
+            <div container>
+                <div class="row" style="margin-top: 25px; margin-left: 25px; margin-right: 15px;">
+                    <div class="col-sm-3">
                     <h4 style="text-align: center">What Can We Help You With?</h4>
                     <button type="button" class="btn btn-lg" style="width: 100%; background-color: orange; border: none; border-radius: none;">I WANT TO...</button>
-                    <div class="card" style="background-color: #005d73; color: white;">
+                    <div class="card" style="background-color: #005d73; color: white; margin-top: 15px;">
+                    <div class="card-header" style="background-color: teal">
+                    <h2 class="card-title">Top Requests</h2>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Top Requests</h2>
                         <p class="card-text">
                             <a href="http://www.providenceri.gov/collector/online-tax-payment-system/" class="text-light">Pay Taxes</a><br/>
                             <a href="https://wmq.etimspayments.com/pbw/include/providence/input.jsp" class="text-light">Snow Ready</a><br/>
@@ -76,10 +86,11 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="card">
+                <div class="col-md-8">
+                <div class="card-deck d-flex align-items-stretch">
+                    <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title text-info" style="text-align:center;">Mayor Elorza Announces Moody's Upgrade of Providence's Outlook to Stable from Negative</h2>
+                        <h5 class="card-title text-info" style="text-align:center;">Mayor Elorza Announces Moody's Upgrade of Providence's Outlook to Stable from Negative</h5>
                         <p class="card-text" tyle="font-family: Source Sans Pro, sans-serif;">Agency Affirms Baa1 General Obligation & Baa2 Lease Ratings
                         June 19, 2018
                         PROVIDENCE, RI - Mayor Jorge Elorza today announced that Moody's Investors Service has upgraded the City of Providence's outlook to stable from negative. Moody's also affirmed the City's Baa1 general obligation rating and Baa2 lease ratings. According to the agency, the upgrade reflects Providence's improved financial position, manageable fixed costs and growing 
@@ -90,11 +101,9 @@
                         <a href="#http://www.providenceri.gov/mayor-elorza-announces-moodys-upgrade-providences-outlook-stable-negative/" class="card-link text-secondary">MORE</a>
                     </div>
                     </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card">
+                    <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title text-info">Mayor Elorza Announces Appointment to United States Conference of Mayors Board of Trustees</h2>
+                        <h5 class="card-title text-info">Mayor Elorza Announces Appointment to United States Conference of Mayors Board of Trustees</h5>
                         <p class="card-text" style="font-family: Source Sans Pro, sans-serif;">
 
                             Mayor Elorza appointed to leadership of national organization of mayors during its 86th Annual Meeting
@@ -103,27 +112,70 @@
                             "I am proud to be elected to this leadership position and I thank my fellow mayors for their support," said Mayor Elorza. "Mayors across the country are stepping up to tackle frontline issues in America in ways that are results-oriented and bi-partisan. While the divisive forces that seek to separate us from one another seemingly grow stronger every day, it is our unique role as mayors to tackle the issues in a way that brings our residents together."
                             During the conference, more than 250 mayors discussed a wide variety of bipartisan priorities that contribute to the overall health of America's cities, as well as considered and adopted the policy resolutions that guide the national advocacy agenda of the organization. The policy positions adopted at the annual meeting collectively represent the views of the nation's mayors and are distributed to the President of the United States and Congress.
                             In his new role as trustee, Mayor Elorza will continue to lead on issues of economic opportunity, equity and inequality in Providence and among his colleagues nationwide. He currently serves as Vice Chair of the Standing Committee on Community Development and Housing and Co-chair of the USCM Immigration Reform Task Force that has urged Congress to pass the Dream Act and has discussed immigration issues with Attorney General Jeff Sessions and former Department of Homeland Security Secretary and current White House Chief of Staff General John Kelly.
-                            Earlier this year, Providence was one of only six cities nationwide to be recognized during the 2018 Childhood Obesity Prevention Awards at the USCM’s 86th Winter Meeting in Washington D.C. The awards went to cities with “outstanding programs that encourage healthy weight through balanced diet choices and regular physical activity.” Providence was awarded a $25,000 grant for its program Eat Play Learn PVD, which targets underrepresented youth and aims to provide greater access for the target populations to summer camps, summer meals, and learning opportunities that will address both childhood obesity and school readiness.
+                            Earlier this year, Providence was one of only six cities nationwide to be recognized during the 2018 Childhood Obesity Prevention Awards at the USCM's 86th Winter Meeting in Washington D.C. The awards went to cities with "outstanding programs that encourage healthy weight through balanced diet choices and regular physical activity." Providence was awarded a $25,000 grant for its program Eat Play Learn PVD, which targets underrepresented youth and aims to provide greater access for the target populations to summer camps, summer meals, and learning opportunities that will address both childhood obesity and school readiness.
                             </br>
                             </br>
                             <strong>About USCM</strong>
                             </br>
                             </br>
-                            The Conference holds its Winter Meeting each January in Washington, D.C. and an Annual Meeting each June in a different U.S. city. Additional meetings and events are held as directed by the Conference leadership. Conference members speak with a united voice on organizational policies and goals. Mayors contribute to the development of national urban policy by serving on one or more of the conference’s standing committees. Conference policies and programs are developed and guided by an Executive Committee and Advisory Board, as well as the standing committees and task forces which are formed to meet changing needs.
-                            During the Conference's Annual Meeting in June, standing committees recommend policy positions they believe should be adopted by the organization. The policy positions adopted at the annual meeting collectively represent the views of the nation's mayors and are distributed to the President of the United States and Congress. In addition to the ongoing work of the Conference’s standing committees, mayors are organized into task forces to examine and act on issues that demand special attention such as civic innovation, economic mobility, hunger and homelessness, and infrastructure. Learn more about the conference here.</p>
+                            The Conference holds its Winter Meeting each January in Washington, D.C. and an Annual Meeting each June in a different U.S. city. Additional meetings and events are held as directed by the Conference leadership. Conference members speak with a united voice on organizational policies and goals. Mayors contribute to the development of national urban policy by serving on one or more of the conference's standing committees. Conference policies and programs are developed and guided by an Executive Committee and Advisory Board, as well as the standing committees and task forces which are formed to meet changing needs.
+                            During the Conference's Annual Meeting in June, standing committees recommend policy positions they believe should be adopted by the organization. The policy positions adopted at the annual meeting collectively represent the views of the nation's mayors and are distributed to the President of the United States and Congress. In addition to the ongoing work of the Conference's standing committees, mayors are organized into task forces to examine and act on issues that demand special attention such as civic innovation, economic mobility, hunger and homelessness, and infrastructure. Learn more about the conference here.</p>
                         <a href="http://www.providenceri.gov/mayor-elorza-announces-appointment-united-states-conference-mayors-board-trustees/" class="card-link text-secondary">MORE</a>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer style="padding-bottom: 49px;">
-            <div class="footer-top-wrapper">
-                <div class="footer-top container">
-                    <div class="row">
-                
+        </div>
+        <div style="margin-top: 25px; padding-bottom: 49px;">
+            <div class="middle container wrapper">
+                <div class="middle container">
+                    <div class="row h-100">
+                        <div class="col-sm-5" style="background-image: url(http://www.providenceri.gov/wp-content/uploads/2017/06/CiyHall.jpg)">
+                        </div>
+                        <div class="col-sm-6">
+                        <h2 style="text-secondary">Open Providence</h2>
+                        <h4 style="text-secondary">Your Government, open to You</h4>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>
+        <div class="widget"><h2>Providence City Hall</h2>			<div class="textwidget"><p><a href="tel:401 680 5000">401-680-5000</a></p>
+                <p>25 Dorrance Street</p>
+                <p>Providence, Rhode Island 02903</p>
+                <a target="_blank" href="https://www.google.com/maps/place/25+Dorrance+St,+Providence,+RI+02903/@41.824023,-71.4150965,17z/data=!3m1!4b1!4m5!3m4!1s0x89e44513e54e5a21:0x61ca849d9d5e5ce3!8m2!3d41.824023!4d-71.4129078" class="fig-btn">Get Directions</a></div>
+		</div>
+		<div class="widget">
+            <section id='' class='fig-widget-social-wrap'>
+            <div class="section-header">
+            <h2 class="section-title">Follow Us on Social Media:</h2>
+      
+        </div>
+
+        <div class="fig-widget-social">
+          <ul class='fig-social-links'>
+              <li><a href='https://www.facebook.com/MayorJorgeElorza/' target='_blank'>
+                  <span class='was-i fa fa-facebook'>
+                  <span class='hide-span'>Facebook Icon</span>
+                  </span></a></li>
+              <li><a href='https://twitter.com/Jorge_Elorza' target='_blank'>
+                  <span class='was-i fa fa-twitter'>
+                  <span class='hide-span'>Twitter Icon</span>
+                  </span></a></li>
+          </ul>
+         </div>
+            </section>
+        </div>
+        <div class="footer-bottom-wrapper">
+        <div class="footer-bottom container">
+          <div class="row">
+        <div class="widget">			
+          <div class="textwidget"><p style="text-align: center"><a href="/departments/"><strong>Department Directory</strong></a>&nbsp; | <a href="/privacy-policy"><strong>Privacy Policy</strong></a> &nbsp; | &nbsp;<a href="/sitemap"><strong>SiteMap</strong></a>&nbsp; | &nbsp; &copy 2018 <a href="/"><strong>City of Providence.</strong></a> All rights reserved.</p></div>
+		</div>
+		</div>
+        </div>
+      </div>
+    	</footer>
     </body>
 </html>
